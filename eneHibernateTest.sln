@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eneHibernateTest", "eneHibernateTest\eneHibernateTest.csproj", "{9407AFB3-D6D0-4F13-A255-5A3A48BB67D1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{529145D5-6CC3-4016-89B5-826563024AF1} = {529145D5-6CC3-4016-89B5-826563024AF1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentNHibernate", "..\fluent-nhibernate\src\FluentNHibernate\FluentNHibernate.csproj", "{529145D5-6CC3-4016-89B5-826563024AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eneHibernateTest.Test", "eneHibernateTest.Test\eneHibernateTest.Test.csproj", "{0C59463C-26E8-4674-933F-38538092F9F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9407AFB3-D6D0-4F13-A255-5A3A48BB67D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9407AFB3-D6D0-4F13-A255-5A3A48BB67D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9407AFB3-D6D0-4F13-A255-5A3A48BB67D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9407AFB3-D6D0-4F13-A255-5A3A48BB67D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{529145D5-6CC3-4016-89B5-826563024AF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{529145D5-6CC3-4016-89B5-826563024AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{529145D5-6CC3-4016-89B5-826563024AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{529145D5-6CC3-4016-89B5-826563024AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C59463C-26E8-4674-933F-38538092F9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C59463C-26E8-4674-933F-38538092F9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C59463C-26E8-4674-933F-38538092F9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C59463C-26E8-4674-933F-38538092F9F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
