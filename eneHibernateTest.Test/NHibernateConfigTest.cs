@@ -58,6 +58,17 @@ namespace eneHibernateTest.Test
 		}
 
 		[Fact]
+		public void WhenModify()
+		{
+			var session = kernel.Get<ISessionSource>().CreateSession();
+			session.Save(new DataMapper("Sri Lanka"));
+			var obj = session.Query<DataMapper>().Where(d => d.Name == "Sri Lanka").First();
+			obj.Name = obj.Name + "s";
+			session.Update(obj);
+			session.Flush();
+		}
+
+		[Fact]
 		public void CanGetAllObjectsFromDB()
 		{
 			var session = kernel.Get<ISessionSource>().CreateSession();

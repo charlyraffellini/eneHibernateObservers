@@ -1,7 +1,9 @@
 ﻿using eneHibernateTest.Persitence;
+using eneHibernateTest.Persitence.Observers;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate.Cfg;
+using NHibernate.Event;
 using NHibernate.Tool.hbm2ddl;
 using ISessionSource = eneHibernateTest.Persitence.ISessionSource;
 using SessionSource = eneHibernateTest.Persitence.SessionSource;
@@ -28,6 +30,7 @@ namespace eneHibernateTest.DI.Providers
 
 		private static void BuildSchema(Configuration cfg)
 		{
+			cfg.AppendListeners(ListenerType.PostUpdate, new []{new DataMapperObserver()});
 			new SchemaUpdate(cfg).Execute(false, true);
 		}
 

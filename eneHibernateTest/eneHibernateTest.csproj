@@ -212,6 +212,8 @@
     <Compile Include="Models\IdentificableObject.cs" />
     <Compile Include="Persitence\DBConfiguration.cs" />
     <Compile Include="Persitence\NHibernateMappings.cs" />
+    <Compile Include="Persitence\Observers\DataMapperObserver.cs" />
+    <Compile Include="Persitence\Observers\NHibernateObserver.cs" />
     <Compile Include="Persitence\OrmMappingConventions.cs" />
     <Compile Include="Persitence\SessionSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
