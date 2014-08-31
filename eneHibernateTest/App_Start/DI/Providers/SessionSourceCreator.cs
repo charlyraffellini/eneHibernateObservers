@@ -31,6 +31,8 @@ namespace eneHibernateTest.DI.Providers
 		private static void BuildSchema(Configuration cfg)
 		{
 			cfg.AppendListeners(ListenerType.PostUpdate, new []{new DataMapperObserver()});
+			cfg.AppendListeners(ListenerType.PostCollectionUpdate, new[] { new DataMapperCollectionObserver() });
+			cfg.AppendListeners(ListenerType.PostCollectionRecreate, new[] { new DataMapperCollectionObserver() });
 			new SchemaUpdate(cfg).Execute(false, true);
 		}
 

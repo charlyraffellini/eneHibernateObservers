@@ -208,6 +208,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BagOfDataMapper.cs" />
     <Compile Include="Models\DataMapper.cs" />
     <Compile Include="Models\IdentificableObject.cs" />
     <Compile Include="Persitence\DBConfiguration.cs" />

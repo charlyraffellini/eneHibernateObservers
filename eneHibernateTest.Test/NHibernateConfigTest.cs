@@ -77,6 +77,32 @@ namespace eneHibernateTest.Test
 			objects.Should().HaveCount(1);
 		}
 
+		[Fact]
+		public void CreateCollectionToCollection()
+		{
+			var session = kernel.Get<ISessionSource>().CreateSession();
+
+			var bag = new BagOfDataMapper();
+			var datamapper = new DataMapper("The Old Woman");
+			bag.DataMappers.Add(datamapper);
+			session.Save(datamapper);
+			session.Save(bag);
+			session.Flush();
+		}
+
+		[Fact]
+		public void AddElementsToCollection()
+		{
+			var session = kernel.Get<ISessionSource>().CreateSession();
+
+			var bag = session.Query<BagOfDataMapper>().First();
+			var datamapper = new DataMapper("Darin");
+			bag.DataMappers.Add(datamapper);
+			session.Save(datamapper);
+			session.Save(bag);
+			session.Flush();
+		}
+
 		public void SetFixture(RealApiFixture data)
 		{
 			this.kernel = data.Kernel;
